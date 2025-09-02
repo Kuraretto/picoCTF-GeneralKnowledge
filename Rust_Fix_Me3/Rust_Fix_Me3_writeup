@@ -1,0 +1,13 @@
+Rust_Fix_Me3
+
+Description
+Have you heard of Rust? Fix the syntax errors in this Rust file to print the flag!
+
+this is a very simple challenege, once i read the code i came across the 
+unsafe{} code block which was commented 
+
+all we need to do is uncomment the code block and run the main.rs rust script 
+
+we can run the rust script using this command 
+
+cargo run 
