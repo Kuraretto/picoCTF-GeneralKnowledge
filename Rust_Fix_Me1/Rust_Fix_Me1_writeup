@@ -1,0 +1,40 @@
+Rust fixme 1
+
+Description
+Have you heard of Rust? Fix the syntax errors in this Rust file to print the flag!
+
+when looking at the code and reading the comments all the errors in the code was mentioned and 
+it was a very easy fix 
+
+first we run the code using "cargo run"
+
+the compiler throws all the reported errors 
+
+the first was adding a ";"
+
+let key = String::from("CSUCKS") // <- missing `;`
+
+so we add the ;
+
+the next error is the return 
+
+ret; // <- `ret` doesn’t exist in Rust
+
+ret is invalid the correct one is "return"
+
+the third error which i found was 
+
+println!(
+    ":?", // <- invalid, needs a placeholder like "{}"
+    String::from_utf8_lossy(&decrypted_buffer)
+);
+
+
+replace that with 
+
+println!("Decrypted flag: {}",String::from_utf8_lossy(&decrypted_buffer));
+
+once you fix these 3 errors save the .rs file and run it again using "congo run" 
+
+this time it should print the output
+
