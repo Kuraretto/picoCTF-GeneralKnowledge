@@ -1,0 +1,70 @@
+SansAlpha
+
+Description
+The Multiverse is within your grasp! Unfortunately, the server that contains the secrets of the multiverse is in a universe where keyboards only have numbers and (most) symbols.
+
+Additional details will be available after launching your challenge instance.
+
+first we launch the instance in the challenge 
+
+then we open the terminal and connect with the instance using ssh as given in the challenege 
+
+as soon as we connect with the instance i tried using a few comamnds like ls, cd , etc 
+but none of them worked 
+
+then i refered about this online and saw that there were 
+-Wildcards 
+-Golbbing 
+
+links for both 
+
+https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm (Wildcard)
+
+https://tldp.org/LDP/abs/html/globbingref.html (Gobbing)
+
+these are the few characters which we aer going to be using in this challenge 
+
+? : match 1 character, ex. /??? -> /bin /dev 
+
+* : match 0 or more characters, ex. /lib* -> /lib /lib32 
+
+[ ] : matches any single character within the specified range or set, ex. file[345].txt or file[3–5].txt -> file3.txt, file4.txt, file5.txt
+
+[!] : matches any character that is not in the specified range or set, ex. file[!12].txt -> any files from file0.txt-file9.txt, except file1.txt and file2.txt
+
+with this i started searching for the flag file and which directory i was in 
+
+i tried ./*
+
+and it said i was in the ./blargh directory 
+
+then when i tried doing 
+
+./*/*
+
+it showed be that 
+
+./blargh/flag.txt : Permission denied
+
+then i focused on searching for the other directory, i kept adding /? till i was able to find the other directory
+
+ex : /???, /????, /?????, /?????? etc 
+
+by using this method i was able to find that the path of the flag was 
+
+/home/ctf-player/blargh/flag.txt
+
+after this step i was stuck and started to look for writeups online and went through this 
+
+https://medium.com/@niceselol/picoctf-2024-sansalpha-86bbdb58bde6
+
+after trying to undestand how it was done i got the idea and tried it 
+for future reference please look into the link above 
+
+i was able to get the flag by using this cmd 
+"/???/???[!_]64 /????/??????????/??????/????????"
+
+but this only retured the flag encryptred using base 64 
+
+so i took the output and pasted it on cyberchef and used the from base64 recipe to decrypt the flag
+
