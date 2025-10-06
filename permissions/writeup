@@ -1,0 +1,29 @@
+pretty easy challenge 
+
+first we connect to the server using the instructions provided in the challenge
+once we are conencted to the server, we check which directory we are in 
+using the ls -all command, we know that we have to access the root directory to find the flag, so to access the root directory we need to have permission to check our current permissions, i use the command sudo -l this shows us a hint 
+
+User picoplayer may run the following commands on challenge:
+    (ALL) /usr/bin/vi
+
+
+using this clue i run the comamnd 
+
+sudo vi <file_name> 
+
+i went with test as the file name 
+
+it opens up a vi editor were we write another command 
+
+:!/bin/bash
+
+for more command like this you can refer 
+
+https://gtfobins.github.io/
+
+once you run that in the editor and press enter we get root access, then you navigate back to the root folder and this time we should be able to get access into it, and see the contents inside the folder, we can see that there is a folder named flag.txt 
+
+using the cat command we can view our flag 
+
+
