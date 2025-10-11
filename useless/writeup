@@ -1,0 +1,18 @@
+very easy challenege 
+
+launch the instance and connect to the serbver using ssh by using the creds given in the challeneg 
+
+using this command we connect to the server 
+
+ssh -p 51559 picoplayer@saturn.picoctf.net
+
+once inside the server we use the ls command to see the files in the directorty 
+we see that there is file names useless and when checked the file type using the file command we see that it is a shell command 
+
+and when i tried running it by using the ./ command it returned read the code first, so i used the cat command to read the code and saw that more info can be obtained by using the man command so i use 
+
+man useless 
+
+and it gives us the output with the flag 
+
+
