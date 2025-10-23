@@ -1,0 +1,10 @@
+very simple challenege
+
+connect to the server using the nc command and see what happens 
+
+first it prints out a large output, to search for the flag all we do is use grep with the nc command 
+
+nc jupiter.challenges.picoctf.org 7480 | grep "pico"
+
+using this command will give us the flag 
+
